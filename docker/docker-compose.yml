@@ -20,6 +20,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
       MONGO_INITDB_ROOT_PASSWORD: secret
+      MONGO_INITDB_DATABASE: countries
     ports:
       - 28017:27017
   
