@@ -78,3 +78,16 @@ services:
         source: ./logstash_pipeline/
         target: /usr/share/logstash/pipeline
         read_only: true   
+
+
+  rabbitmq1:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq1
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: appUser
+      RABBITMQ_DEFAULT_PASS: 13
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - 5673:5672
+      - 15673:15672
